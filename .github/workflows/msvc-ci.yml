@@ -13,7 +13,6 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake -G "Visual Studio 17 2022" -A Win32 ..
           cmake --build .
 
       # This should probably be fixed to work from MSVC without needing to
@@ -22,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: artifact
-          path: ./
+          path: ./build/
